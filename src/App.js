@@ -4,6 +4,7 @@ import {NavBar} from './componets/NavBar';
 import {HomeBanner} from './componets/HomeBanner';
 import {Skills} from './componets/Skills';
 import {Project} from './componets/Project';
+import { Footer } from './componets/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <HomeBanner />
       <Skills />
       <Project />
+      <Footer />
     </div>
   );
 }

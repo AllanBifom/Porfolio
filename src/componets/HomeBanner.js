@@ -3,6 +3,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useState, useEffect } from "react";
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
+
 // import Header Image
 
 
@@ -47,6 +50,9 @@ export const HomeBanner = () => {
             <Container className="banner" id="home">
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
+                        <TrackVisibility>
+                        {({ isVisible }) =>
+                        <div className={isVisible ? "animated__animated animate__fadeIn" : ""}> 
                         <span className="tagline">
                             Welcome to Allan Bifom's Web Portfolio
                         </span>
@@ -55,14 +61,19 @@ export const HomeBanner = () => {
                                 {`Hi I'm Allan  `}
                                 {text}
                             </span>
+                            </h1>    
                             <p>
-
+                                Fill Up With summary
                             </p>
                             <button onClick={() => console.log('connect')}>
                                 Let's Connect!
                                 <ArrowRightCircle size={25} />
                             </button>
-                        </h1>
+                            </div>}
+                        
+                        </TrackVisibility>
+                            
+                        
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={''}  alt="Header Img" />

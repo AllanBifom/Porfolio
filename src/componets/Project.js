@@ -1,5 +1,8 @@
 import { Container, Row, Nav, Tab, Col } from "react-bootstrap";
-import {Card} from "./Cards"
+import {Card} from "./Cards";
+import 'animate.css';
+import TrackVisibility from "react-on-screen";
+
 
 
 export const Project = () => {
@@ -30,12 +33,17 @@ export const Project = () => {
             <Container>
                 <Row>
                     <Col>
-                    <h2>
-                        Past Projects
-                    </h2>
-                    <p>
-                        Comming soon
-                    </p>
+                        <TrackVisibility>
+                            {({ isVisible }) =>
+                                <div className={isVisible ? "animated__animated animate__Bounce" : ""}> 
+                                    <h2>
+                                        Past Projects
+                                    </h2>
+                                    <p>
+                                        Comming soon
+                                    </p>
+                                </div>}
+                            </TrackVisibility>
                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab" >
                         <Nav.Item>
